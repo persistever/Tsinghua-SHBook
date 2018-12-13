@@ -1,0 +1,14 @@
+/* 轮播图 */
+.swiper{
+    width:100%;
+    margin:0rpx;
+}
+.swiper image{
+    display: inline;
+}
+
+.message-input{
+  border: 1rpx solid gray;
+  border-radius: 15rpx;
+  margin-right: 200rpx;
+}

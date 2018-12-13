@@ -1,0 +1,34 @@
+<!--pages/publish/publish.wxml-->
+<view class="container">
+    <view class="ar_cont">
+        <text class="ar_cont_h1">请输入资料名</text>
+        <view class="wxSearch-section">
+          <view class="wxSearch-pancel">
+            <input bindinput="wxGetName" value="{{wxSearchData.value}}"                 class="input_msg" />
+          </view>
+        </view>
+        <text class="ar_cont_h1">请输入课程名</text>
+        <view class="wxSearch-section">
+          <view class="wxSearch-pancel">
+          <input bindinput="wxGetCourseName" value="{{wxSearchData.value}}" class="input_msg" />
+          </view>
+        </view>
+        <text class="ar_cont_h1">请输入价格</text>
+        <view class="wxSearch-section">
+          <view class="wxSearch-pancel">
+          <input bindinput="wxGetPrice" value="{{wxSearchData.value}}"                class="input_msg" />
+          </view>
+        </view>
+        <view>
+          <button class="wxSearch-button" bindtap="wxToUploadPhoto"                   size="mid" plain="true">上传图片</button>
+        </view>
+
+        <button class="ar_book" bindtap="bindToastTap">确认发布</button>
+        
+        <toast hidden="{{bookToastHidden}}"  bindchange="hideToast">
+        发布成功
+        </toast> 
+        
+    </view>
+
+</view>

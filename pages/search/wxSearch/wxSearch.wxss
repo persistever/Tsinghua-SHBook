@@ -1,0 +1,156 @@
+.wxSearch{
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px #eee solid;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.wxSearchInner{
+  background-color: #fff;
+}
+.wxSearch-section{
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px #eee solid;
+}
+.wxSearch-pancel{
+  display: flex;
+  flex-direction: row;
+}
+.wxSearch-input{
+  flex: 8; 
+  background-color: #eee;
+  padding: 5px 10px;
+}
+.wxSearch-button{
+  flex: 1;
+  border: none !important;
+  color: cornflowerblue !important;
+}
+
+.wxSearchTitle{
+  display: block;
+  padding: 10px 5px 5px 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+.wxSearchMindKeyItem{
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  font-size: 14px;
+  color: cornflowerblue;
+}
+
+.wxSearchKeyList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wxSearchKeyItem{
+  flex: 0 0 20%;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #eee;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.wxSearchHistoryItem{
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+.wxSearchHistoryItemText{
+  flex: 8;
+  font-size: 14px;
+}
+.wxSearchHistoryItemDel{
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  padding: 3px 5px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+.wxSearchHistoryEmpty{
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+}
+.wxSearchDeleteAllBtn{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+/* 导航对应内容项 */
+.nav_section{
+    width:100%;
+}
+.nav_section_items{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:30rpx;
+    border-bottom:2rpx solid #ddd;
+    position: relative;
+}
+.nav_section_items:active{
+    background:#ddd;
+}
+.nav_section_items .section_image{
+    width:170rpx;
+    height:158rpx;
+}
+.nav_section_items .section_image image{
+    width:100%;
+    height:100%;
+}
+.nav_section_items .section_cont{
+    width:400rpx;
+    font-size:26rpx;
+    color:#a9a9a9;
+    
+}
+.nav_section_items .section_cont view{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    display: block;
+}
+.nav_section_items .section_cont .section_cont_intro{
+    white-space:normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.nav_section_items .section_cont .section_cont_sub{
+    font-size: 30rpx;
+    line-height:60rpx;
+    color:#000;
+    margin-bottom:10rpx;
+}
+.nav_section_items .section_cont .section_cont_price{
+    font-size:32rpx;
+    color:#d24a58;
+}
+.nav_section_items .section_book{
+    width:80rpx;
+    height:80rpx;
+    font-size:26rpx;
+    border-radius:100%;
+    background:#d24a58;
+    line-height: 80rpx;
+    color:#fff;
+    text-align: center;
+    margin-top:35rpx;
+}

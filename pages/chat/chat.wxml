@@ -1,0 +1,61 @@
+<!--pages/index/to_news/to_news.wxml-->
+<!--上半部分加入书籍图片和信息以及接口的view-->
+<view class='tab'>
+  <view class='flex'>
+  <view>
+    <image bindtap="ToBook" class='book_img' src='/images/wjf1.jpg'></image>
+  </view>
+  <view class = 'right'>
+    <view><text class='book_name'>{{bookname}}</text></view>
+    <view><text class='book_price'>{{bookprice}}</text></view>
+    <view><text class='book_status'>{{bookstatus}}</text></view>
+  </view>
+  </view>
+</view>
+
+<!--下半部分聊天view-->
+<view class='news'>
+  <text class='time'>{{date_time}}</text> 
+  <view class='message'>
+  <text>{{my_message}}</text>
+  </view>
+  <view class='xiahuaxian1 xiahuaxia'></view>
+  <view class="historycon">
+    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" class="history" wx:for="{{centendata}}" wx:key=''>
+      <view>
+        <text class='time'>{{date_time}}</text> 
+      </view>
+      <block wx:if="{{item.is_show_right ==1}}">
+        <view class='my_right'>
+          <view class='page_row'>
+            <text wx:if='{{!item.is_img}}' class='new_txt'>{{item.content}}</text>
+            <image wx:if='{{item.is_img}}' src='\images\banner_1/{{item.content}}' class='new_imgtent'></image>
+            <view wx:if='{{!item.is_img}}' class='sanjiao my'></view>
+            <image class='new_img' wx:if='{{item.show_rignt == "是自己的内容，显示在右边，右边渲染 nickname_owner，head_owner"}}' src='{{item.head_owner}}'></image>
+             <image class='new_img' wx:if='{{item.show_rignt == "是自己的内容，显示在右边，右边渲染 nickname_open，head_open"}}' src='{{item.head_open}}'></image>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='you_left'>
+          <view class='page_row'>
+            <image class='new_img' wx:if='{{item.show_rignt == "不是自己的内容，显示在左边，左边渲染 nickname_owner，head_owner"}}' src='{{item.head_owner}}'></image>
+             <image class='new_img' wx:if='{{item.show_rignt == "不是自己的内容，显示在左边，左边渲染 nickname_open，head_open"}}' src='{{item.head_open}}'></image>
+            <view wx:if='{{!item.is_img}}' class='sanjiao you'></view>
+            <text wx:if='{{!item.is_img}}' class='new_txt'>{{item.content}}</text>
+            <image wx:if='{{item.is_img}}' src='http://sz800800.cn/Uploads/{{item.content}}' class='new_imgtent'></image>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+<!--白色矩形-->
+<view class='hei' id="hei"></view>
+<!--发送信息-->
+<view class="sendmessage">
+  <input type="emoji" bindinput="bindChange" confirm-type="done" value='{{news_input_val}}' placeholder="" />
+  <button catchtap="add">发送</button>
+  <input style='display:none' type="" bindinput="bindChange" confirm-type="done" placeholder="" />
+  <image bindtap="upimg1" class='jia_img' src='/images/add.png'></image>
+</view>
